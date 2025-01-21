@@ -60,7 +60,7 @@ export default function CustomCarousel() {
         {currentIndex > 0 && (
           <div className="absolute inset-0 flex flex-col justify-between items-center text-white p-4">
             {/* Heading Animation */}
-            <h2 className="text-2xl font-bold text-center animate-fadeIn">
+            <h2 className="text-2xl font-bold text-center bg-black bg-opacity-50 px-4 py-2 rounded animate-fadeIn">
               Our Achievements
             </h2>
   

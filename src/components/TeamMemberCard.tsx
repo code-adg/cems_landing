@@ -39,9 +39,9 @@ export function TeamMemberCard({ name, role, image, bio, linkedin }: TeamMemberP
           </div>
         </div>
       </div>
-      <h3 className="text-sm font-bold mb-0.5 text-white">{name}</h3>
-      <p className="text-emerald-400 text-xs font-medium mb-1">{role}</p>
-      <p className="text-gray-400 text-xs">{bio}</p>
+      <h3 className="text-sm text-center font-bold mb-0.5 text-white">{name}</h3>
+      <p className="text-emerald-400 text-center text-xs font-medium mb-1">{role}</p>
+      <p className="text-gray-400 text-center text-xs">{bio}</p>
     </div>
   );
 }
