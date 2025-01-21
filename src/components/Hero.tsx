@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowRight, Check, Clock, HelpCircle, PlayCircle, Shield, X, Zap } from 'lucide-react';
 import { scrollTo } from '../utils/scrollTo';
+import CustomCarousel from './HeroCarousel';
 
 const features = [
   'Real-time Energy Monitoring',
@@ -50,6 +51,8 @@ function Modal({ isOpen, onClose, children }: any) {
 
 export default function Hero() {
   const [isPricingModalOpen, setPricingModalOpen] = useState(false);
+  const [isVideoModalOpen, setVideoModalOpen] = useState(false);
+
   return (
     <div id="hero" className="min-h-screen relative overflow-hidden">
       {/* Background Elements */}
@@ -87,17 +90,18 @@ export default function Hero() {
                 Schedule Demo <ArrowRight className="w-5 h-5" />
               </button>
               <button 
-                onClick={() => scrollTo('products')}
+                onClick={() => setVideoModalOpen(true)} // Open video modal
                 className="bg-gray-800/80 backdrop-blur-sm text-gray-100 px-8 py-4 rounded-lg 
                   font-semibold hover:bg-gray-700 transition-all hover:shadow-lg border border-gray-700
                   flex items-center gap-2"
               >
                 Watch Video <PlayCircle className="w-5 h-5 text-emerald-400" />
               </button>
+
             </div>
             <div className="flex gap-8 pt-8">
               {[
-                { value: '30%', label: 'Energy Savings' },
+                { value: '10%', label: 'Energy Savings' },
                 { value: '24/7', label: 'Monitoring' }
               ].map((stat, index) => (
                 <div key={index} className="bg-gray-800/80 backdrop-blur-sm px-6 py-4 rounded-xl shadow-lg border border-gray-700">
@@ -119,74 +123,83 @@ export default function Hero() {
           </div>
           <div className="flex-1 relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-3xl blur-3xl"></div>
-            <img 
-              src="/gems-hero.png" 
-              alt="Green Fusion Energy Management System"
-              className="relative w-full max-w-2xl mx-auto rounded-3xl shadow-2xl 
-                transform hover:scale-[1.02] transition-transform duration-300"
-            />
-            
+            <CustomCarousel/>
           </div>
         </div>
       </div>
+
+      <Modal isOpen={isVideoModalOpen} onClose={() => setVideoModalOpen(false)}>
+        <div className="relative">
+          <video
+            src="../public/hero_video" // Replace with your video file path
+            controls
+            autoPlay
+            className="w-full rounded-lg shadow-lg"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </Modal>
+
+
       {/* Pricing Modal */}
       <Modal isOpen={isPricingModalOpen} onClose={() => setPricingModalOpen(false)}>
-  <div className="text-center mb-8">
-    <h2 className="text-3xl font-bold text-white mb-4">Transparent Pricing</h2>
-    <p className="text-xl text-gray-300">
-      Everything you need to optimize your energy consumption
-    </p>
-  </div>
-
-  <div className="grid md:grid-cols-2 gap-8">
-    <div className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-700">
-      <div className="p-8">
-        <h3 className="text-2xl font-bold text-white mb-4">Standard Package</h3>
-        <div className="flex items-baseline mb-8">
-          <span className="text-5xl font-bold text-emerald-400">₹50,000</span>
-          <span className="text-gray-400 ml-2">per device</span>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-white mb-4">Transparent Pricing</h2>
+          <p className="text-xl text-gray-300">
+            Everything you need to optimize your energy consumption
+          </p>
         </div>
-        <ul className="space-y-4 mb-8">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-center gap-3">
-              <Check className="w-5 h-5 text-emerald-500" />
-              <span className="text-gray-300">{feature}</span>
-            </li>
-          ))}
-        </ul>
-        <button
-          onClick={() => {
-            setPricingModalOpen(false);
-            scrollTo('contact');
-          }}
-          className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 
-            hover:from-emerald-500 hover:to-teal-500 text-white py-3 rounded-lg 
-            font-semibold transition-colors flex items-center justify-center gap-2"
-        >
-          Get Started <HelpCircle className="w-5 h-5" />
-        </button>
-      </div>
-    </div>
 
-    <div className="space-y-6">
-      {additionalBenefits.map((benefit, index) => (
-        <div
-          key={index}
-          className="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700"
-        >
-          <div className="text-emerald-500 mb-4">{benefit.icon}</div>
-          <h4 className="text-lg font-semibold text-white mb-2">{benefit.title}</h4>
-          <p className="text-gray-300">{benefit.description}</p>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-700">
+            <div className="p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Standard Package</h3>
+              <div className="flex items-baseline mb-8">
+                <span className="text-5xl font-bold text-emerald-400">₹50,000</span>
+                <span className="text-gray-400 ml-2">per device</span>
+              </div>
+              <ul className="space-y-4 mb-8">
+                {features.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <Check className="w-5 h-5 text-emerald-500" />
+                    <span className="text-gray-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <button
+                onClick={() => {
+                  setPricingModalOpen(false);
+                  scrollTo('contact');
+                }}
+                className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 
+                  hover:from-emerald-500 hover:to-teal-500 text-white py-3 rounded-lg 
+                  font-semibold transition-colors flex items-center justify-center gap-2"
+              >
+                Get Started <HelpCircle className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            {additionalBenefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700"
+              >
+                <div className="text-emerald-500 mb-4">{benefit.icon}</div>
+                <h4 className="text-lg font-semibold text-white mb-2">{benefit.title}</h4>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+            <div className="bg-gray-700 p-6 rounded-xl">
+              <p className="text-sm text-gray-400">
+                * 18% Annual Maintenance Contract applies after the first year
+              </p>
+            </div>
+          </div>
         </div>
-      ))}
-      <div className="bg-gray-700 p-6 rounded-xl">
-        <p className="text-sm text-gray-400">
-          * 18% Annual Maintenance Contract applies after the first year
-        </p>
-      </div>
-    </div>
-  </div>
-</Modal>
+  </Modal>
 
     </div>
   );

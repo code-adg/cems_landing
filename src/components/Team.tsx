@@ -3,59 +3,59 @@ import { TeamMemberCard } from './TeamMemberCard';
 
 const teamMembers = [
   {
-    name: 'Dr. Arun Kumar',
-    role: 'Chief Technology Officer',
+    name: 'Dr. VSN Narasimha Raju',
+    role: 'Director',
     image: '../public/raju_sir.jpg',
     bio: 'PhD in IoT Systems',
     linkedin: 'https://linkedin.com'
   },
   {
-    name: 'Priya Mehta',
-    role: 'Head of AI Research',
+    name: 'Deva',
+    role: 'Managing Director',
     image: '../public/deva.jpg',
     bio: 'ML Expert',
     linkedin: 'https://linkedin.com'
   },
   {
-    name: 'Rahul Sharma',
-    role: 'Lead IoT Engineer',
-    image: '../public/vamsi.jpg',
+    name: 'Srinivas Mukkuvalli',
+    role: 'CEO',
+    image: '../public/srinivas.jpg',
     bio: 'IoT Specialist',
     linkedin: 'https://linkedin.com'
   },
   {
-    name: 'Sarah Wilson',
-    role: 'Product Manager',
-    image: '../public/srinivas.jpg',
+    name: 'Vamsi Sangeppu',
+    role: 'CFO',
+    image: '../public/vamsi.jpg',
     bio: 'Product Strategy',
     linkedin: 'https://linkedin.com'
   },
   {
-    name: 'Alex Chen',
-    role: 'Data Scientist',
+    name: 'Hema',
+    role: 'CMO',
     image: '../public/hema.jpg',
     bio: 'AI/ML Expert',
     linkedin: 'https://linkedin.com'
   },
   {
-    name: 'Maya Patel',
-    role: 'UX Designer',
+    name: 'Koushik',
+    role: 'Lead IoT Engineer',
     image: '../public/koushik.jpg',
     bio: 'UX Research',
     linkedin: 'https://linkedin.com'
   }
   ,
   {
-    name: 'Maya Patel',
-    role: 'UX Designer',
+    name: 'Mohan Ram',
+    role: 'Full Stack Developer',
     image: '../public/mohan.jpg',
     bio: 'UX Research',
     linkedin: 'https://linkedin.com'
   }
   ,
   {
-    name: 'Maya Patel',
-    role: 'UX Designer',
+    name: 'Avinash',
+    role: 'Full Stack Developer',
     image: '../public/avinash.jpg',
     bio: 'UX Research',
     linkedin: 'https://linkedin.com'
