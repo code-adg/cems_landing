@@ -5,42 +5,42 @@ const teamMembers = [
   {
     name: 'Dr. VSN Narasimha Raju',
     role: 'Director',
-    image: '../public/raju_sir.jpg',
+    image: '/raju_sir.jpg',
     bio: 'PhD in IoT Systems',
     linkedin: 'https://linkedin.com'
   },
   {
     name: 'Deva',
     role: 'Managing Director',
-    image: '../public/deva.jpg',
+    image: '/deva.jpg',
     bio: 'ML Expert',
     linkedin: 'https://linkedin.com'
   },
   {
     name: 'Srinivas Mukkuvalli',
     role: 'CEO',
-    image: '../public/srinivas.jpg',
+    image: '/srinivas.jpg',
     bio: 'IoT Specialist',
     linkedin: 'https://linkedin.com'
   },
   {
     name: 'Vamsi Sangeppu',
     role: 'CFO',
-    image: '../public/vamsi.jpg',
+    image: '/vamsi.jpg',
     bio: 'Product Strategy',
     linkedin: 'https://linkedin.com'
   },
   {
     name: 'Hema',
     role: 'CMO',
-    image: '../public/hema.jpg',
+    image: '/hema.jpg',
     bio: 'AI/ML Expert',
     linkedin: 'https://linkedin.com'
   },
   {
     name: 'Koushik',
     role: 'Lead IoT Engineer',
-    image: '../public/koushik.jpg',
+    image: '/koushik.jpg',
     bio: 'UX Research',
     linkedin: 'https://linkedin.com'
   }
@@ -48,7 +48,7 @@ const teamMembers = [
   {
     name: 'Mohan Ram',
     role: 'Full Stack Developer',
-    image: '../public/mohan.jpg',
+    image: '/mohan.jpg',
     bio: 'UX Research',
     linkedin: 'https://linkedin.com'
   }
@@ -56,7 +56,7 @@ const teamMembers = [
   {
     name: 'Avinash',
     role: 'Full Stack Developer',
-    image: '../public/avinash.jpg',
+    image: '/avinash.jpg',
     bio: 'UX Research',
     linkedin: 'https://linkedin.com'
   }

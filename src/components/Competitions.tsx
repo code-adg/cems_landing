@@ -4,31 +4,31 @@ import { Trophy, Award, Star } from 'lucide-react';
 const competitions = [
   {
     title: "Innovation in Manufacturing Practices 2024, NITW",
-    image: "../public/nitw.jpg",
+    image: "/nitw.jpg",
     award: "Winner",
     description: "Recognized for breakthrough IoT technology in industrial energy optimization"
   },
   {
     title: "Tie Grad 2024",
-    image: "../public/tiegrad.jpg",
+    image: "/tiegrad.jpg",
     award: "Winner",
     description: "Selected among 500+ global cleantech startups for innovative energy solutions"
   },
   {
     title: "Spark Tank 2024, VITB",
-    image: "../public/sparktank.jpg",
+    image: "/sparktank.jpg",
     award: "Winner",
     description: "Awarded for contribution to sustainable urban development"
   },
   {
     title: "GNIT Hackathon 2024",
-    image: "../public/gnit.jpg",
+    image: "gnit.jpg",
     award: "Second Runner-Up",
     description: "Awarded for contribution to sustainable urban development"
   },
   {
     title: "Tech and Innovation Fair 2025, IITM",
-    image: "../public/iitm.jpg",
+    image: "/iitm.jpg",
     award: "Runner-Up",
     description: "Awarded for contribution to sustainable urban development"
   }

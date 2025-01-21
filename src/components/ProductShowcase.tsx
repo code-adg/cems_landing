@@ -5,7 +5,7 @@ const products = [
   {
     title: 'Smart Energy Meter',
     description: 'Industrial-grade IoT device with real-time monitoring capabilities',
-    image: '../../public/Picture1.png',
+    image: '/Picture1.png',
     features: ['High precision sensors', 'WiFi/4G connectivity', 'Real-time data streaming']
   },
   {
