@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const carouselImages = [
-  "/gems-hero.png",
+  "/gems-hero2.png",
   "/nitw.jpg",
   "/tiegrad.jpg", // Replace with your actual image paths
   "/sparktank.jpg",
