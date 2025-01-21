@@ -3,18 +3,19 @@ import { useState, useEffect } from "react";
 const carouselImages = [
   "/gems-hero.png",
   "/nitw.jpg",
-  "/iitm.jpg", // Replace with your actual image paths
-  "/gnit.jpg",
+  "/tiegrad.jpg", // Replace with your actual image paths
   "/sparktank.jpg",
-  "/tiegrad.jpg",
+  "/gnit.jpg",
+  "/iitm.jpg",
 ];
 
 const achievements = [
   "", // No achievement for the first slide
-  "Achievement 1: Best Innovation Award",
-  "Achievement 2: Excellence in Education",
-  "Achievement 3: Community Service Leader",
-  "Achievement 4: Top Performer of the Year",
+  "Winner at Innovation in Manufacturing Practices 2024, NITW",
+  "Winner at Tie Grad 2024",
+  "Winner at Spark Tank 2024, VITB",
+  "Second Runner-Up at GNIT Hackathon 2024",
+  "Runner-Up at Tech and Innovation Fair 2025, IITM",
 ];
 
 export default function CustomCarousel() {
@@ -60,7 +61,7 @@ export default function CustomCarousel() {
         {currentIndex > 0 && (
           <div className="absolute inset-0 flex flex-col justify-between items-center text-white p-4">
             {/* Heading Animation */}
-            <h2 className="text-2xl font-bold text-center bg-black bg-opacity-50 px-4 py-2 rounded animate-fadeIn">
+            <h2 className="text-2xl font-bold text-center bg-black bg-opacity-50 px-4 py-2 rounded animate-slideDown">
               Our Achievements
             </h2>
   
@@ -73,28 +74,30 @@ export default function CustomCarousel() {
   
         {/* Animations */}
         <style>{`
-          .animate-fadeIn {
-            animation: fadeIn 1s ease-in-out;
+          .animate-slideDown {
+            animation: slideDown 1s ease-out;
           }
-          @keyframes fadeIn {
+          @keyframes slideDown {
             from {
               opacity: 0;
+              transform: translateY(-100%);
             }
             to {
-              opacity: 1;
+              opacity: 0.8;
+              transform: translateY(0);
             }
           }
   
           .animate-slideUp {
-            animation: slideUp 1s ease-in-out;
+            animation: slideUp 1s ease-out;
           }
           @keyframes slideUp {
             from {
               opacity: 0;
-              transform: translateY(20px);
+              transform: translateY(100%);
             }
             to {
-              opacity: 1;
+              opacity: 0.8;
               transform: translateY(0);
             }
           }

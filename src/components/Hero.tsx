@@ -78,7 +78,7 @@ export default function Hero() {
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl">
               Revolutionizing industrial energy consumption through IoT and AI-powered 
-              solutions. Save up to 30% on energy costs.
+              solutions. Save up to 10% on energy costs.
             </p>
             <div className="flex flex-wrap gap-4">
               <button 
